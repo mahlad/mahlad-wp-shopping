@@ -48,7 +48,7 @@ function create_product_type(){
 	register_post_type('products', $args_pt);
 
 	$labels_prdr = array(
-    'name'  => 'تولید کننده',
+    'name'  => 'تولید کننده ها',
     'singular_name'  => 'تولیدکننده ها',
     'search_items'  => 'جستجوی تولیدکننده',
     'popular_items'  => 'بیشتر استفاده شده',
