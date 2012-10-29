@@ -2,8 +2,8 @@
 
 /*
 Plugin Name: Upload Metaboxe
-Plugin URI: 
-Description: 
+Plugin URI: https://github.com/mahlad/mahlad-wp-shopping/blob/master/shopping_11/wp-content/plugins/post-type/upload-meta.php 
+Description: for insert an image or a file(word/pdf) in a post type
 Author: Mahla Delpak
 Version: 1.2
 Author URI: https://github.com/mahlad 
