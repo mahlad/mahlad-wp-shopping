@@ -1,6 +1,6 @@
 <?php 
 /*
-Plugin Name: Post Type
+Plugin Name: Product Post Type
 Plugin URI: 
 Description:
 Author: Mahla Delpak
@@ -46,5 +46,38 @@ function create_product_type(){
 		'can_export' => true
 		);
 	register_post_type('products', $args_pt);
+
+	$labels_prdr = array(
+    'name'  => 'تولید کننده',
+    'singular_name'  => 'تولیدکننده ها',
+    'search_items'  => 'جستجوی تولیدکننده',
+    'popular_items'  => 'بیشتر استفاده شده',
+    'all_items'  => 'تمام تولیدکننده‌ها',
+    'parent_item'  => 'مادر تولیدکننده',
+    'edit_item'  => 'ویرایش تولیدکننده',
+    'update_item'  => 'بروزرسانی تولیدکننده',
+    'add_new_item'  => 'افزودن تولیدکننده جدید',
+    'new_item_name'    => 'تولیدکننده جدید',
+    'separate_items_with_commas'  => 'تولید کننده ها را با کاما جدا کنید',
+    'add_or_remove_items'  => 'افزودن یا حذف تولیدکننده',
+    'choose_from_most_used'  => 'انتخاب از محبوبها'
+    );
+	$args_tg=array(
+		'label' => 'LG',
+		'labels' =>$labels_prdr,
+		'public' => true,
+		'show_in_nav_menus' => true,
+		'show_ui' => true,
+		'hierarchical' => true,
+		'query_var' => true,
+		// 'rewrite' => array('slug'=>'tag'),
+		'rewrite' => array( 'slug' => 'producer','hierarchical' => true),
+
+		);
+	register_taxonomy('تولیدکننده', 'products', $args_tg);
+
+	add_post_type_support( 'products', 'thumbnail' );
+}
+
 	
  ?>
